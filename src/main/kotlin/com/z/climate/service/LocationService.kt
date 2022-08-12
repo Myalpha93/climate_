@@ -77,10 +77,8 @@ class LocationService: BasicCrud<Location, String> {
 		for (i in 0 until jsonArray.length()) {
 			var row: JSONObject = jsonArray.getJSONObject(i)
 			var id = row.getString("locationID")
-			println(id)
 
 			var jsonId: JSONObject = Requests.obtenerDatosPorLocation(id) as JSONObject
-			println(jsonId)
 			var locat = locations.find { it.locationID==id }
 			var locatNew = Location(
 				locationID=id,

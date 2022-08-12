@@ -25,7 +25,6 @@ class Requests() {
             .header("city_id", "$id")
             .url("$apiClimateEndPoint")
             .build()
-        println(request)
         return request
     }
 
@@ -59,7 +58,6 @@ class Requests() {
             val response: Response = call.execute()
             val resStr = response.body!!.string()
             var status = response.code
-            println("codigo")
             if (status == 200 ){
                 var logNew = Logs(
                     logID= UUID.randomUUID().toString(),
@@ -67,7 +65,6 @@ class Requests() {
                     timestamp = java.sql.Timestamp(System.currentTimeMillis())
                 )
 
-                print(logNew)
             }
 
             val obj = JSONObject(resStr)

@@ -10,7 +10,6 @@ import org.springframework.scheduling.annotation.Scheduled
 class Config {
     @Scheduled(fixedRate = 300000)
     fun fixedRateScheduledTask() {
-        println("Hi hugo")
         Requests.llamarApi()
     }
 }

@@ -12,8 +12,6 @@ abstract class BasicController<T,ID>(private val basicCrud: BasicCrud<T, ID>) {
     fun findAll(): Any {
         val entity = basicCrud.findAll()
         val rnds = (1..10).random()
-        println("random")
-        println(rnds)
         if (rnds > 2) {
 
             return ResponseEntity.status(if(entity!=null) HttpStatus.OK else HttpStatus.NO_CONTENT).body(entity)
