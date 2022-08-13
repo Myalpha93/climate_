@@ -1,6 +1,6 @@
-package com.z.climate.config
+package com.z.demo.config
 
-import com.z.climate.controller.Requests
+import com.z.demo.controller.Requests
 import org.springframework.context.annotation.Configuration
 import org.springframework.scheduling.annotation.EnableScheduling
 import org.springframework.scheduling.annotation.Scheduled

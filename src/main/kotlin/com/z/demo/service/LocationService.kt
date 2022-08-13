@@ -1,12 +1,10 @@
-package com.z.climate.service
+package com.z.demo.service
 
-import com.z.climate.controller.Requests
-import com.z.climate.model.Location
-import com.z.product.utils.update
+import com.z.demo.controller.Requests
+import com.z.demo.model.Location
+import com.z.demo.utils.update
 import org.json.JSONArray
 import org.json.JSONObject
-import org.springframework.http.HttpStatus
-import org.springframework.http.ResponseEntity
 import org.springframework.stereotype.Service
 
 @Service
@@ -70,13 +68,10 @@ class LocationService: BasicCrud<Location, String> {
 
 	override fun findAll():List<Location> {
 		val location = locations.toList()
-		val obj =  JSONObject(location)
-		val jsonArray = JSONArray(location)
 //        var valor = obtenerDatosPorLocation()
 
-		for (i in 0 until jsonArray.length()) {
-			var row: JSONObject = jsonArray.getJSONObject(i)
-			var id = row.getString("locationID")
+		for (i in location) {
+			var id = i.locationID
 
 			var jsonId: JSONObject = Requests.obtenerDatosPorLocation(id) as JSONObject
 			var locat = locations.find { it.locationID==id }

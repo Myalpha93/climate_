@@ -1,11 +1,13 @@
-package com.z.climate
+package com.z.demo
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class ClimateApplication
+class DemoApplication
 
 fun main(args: Array<String>) {
-	runApplication<ClimateApplication>(*args)
+	runApplication<DemoApplication>(*args)
 }
+
+

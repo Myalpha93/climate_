@@ -1,7 +1,7 @@
-package com.z.climate.controller
+package com.z.demo.controller
 
-import com.z.climate.model.Location
-import com.z.climate.service.LocationService
+import com.z.demo.model.Location
+import com.z.demo.service.LocationService
 import org.springframework.web.bind.annotation.*
 
 @RestController

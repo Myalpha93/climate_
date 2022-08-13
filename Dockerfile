@@ -1,16 +1,19 @@
-FROM openjdk:11-slim-buster as build                         
+FROM openjdk:11-slim-buster as build
 
-COPY .mvn .mvn                                               
-COPY mvnw .                                                  
-COPY pom.xml .                                               
-COPY src src                                                 
+COPY .mvn .mvn
+COPY mvnw .
+COPY pom.xml .
 
-RUN ./mvnw -B package                                        
+RUN ./mvnw -B dependency:go-offline
 
-FROM openjdk:11-jre-slim-buster                              
+COPY src src
 
-COPY --from=build target/fast-maven-builds-1.0.jar .         
+RUN ./mvnw -B package
+
+FROM openjdk:11-jre-slim-buster
+
+COPY --from=build target/fast-maven-builds-1.2.jar .
 
 EXPOSE 8080
 
-ENTRYPOINT ["java", "-jar", "fast-maven-builds-1.0.jar"] 
+ENTRYPOINT ["java", "-jar", "fast-maven-builds-1.2.jar"]

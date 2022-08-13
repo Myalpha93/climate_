@@ -1,6 +1,6 @@
-package com.z.climate.service
+package com.z.demo.service
 
-import com.z.climate.model.Location
+import com.z.demo.model.Location
 
 interface BasicCrud<T,ID>{
 	fun findAll(): List<T>

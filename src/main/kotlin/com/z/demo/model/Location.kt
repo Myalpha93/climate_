@@ -1,6 +1,5 @@
-package com.z.climate.model
+package com.z.demo.model
 
-import jdk.jfr.Timestamp
 import org.springframework.data.annotation.Id
 import org.springframework.data.redis.core.RedisHash
 

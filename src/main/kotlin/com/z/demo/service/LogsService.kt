@@ -1,7 +1,7 @@
-package com.z.climate.service
+package com.z.demo.service
 
-import com.z.climate.model.Location
-import com.z.climate.model.Logs
+import com.z.demo.model.Location
+import com.z.demo.model.Logs
 import org.springframework.stereotype.Service
 
 @Service

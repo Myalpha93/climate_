@@ -1,10 +1,10 @@
-package com.z.climate.controller
+package com.z.demo.controller
 
-import com.z.climate.model.Location
-import com.z.climate.model.Logs
-import com.z.climate.service.BasicCrud
-import com.z.climate.service.LocationService
-import com.z.climate.service.LogsService
+import com.z.demo.model.Location
+import com.z.demo.model.Logs
+import com.z.demo.service.BasicCrud
+import com.z.demo.service.LocationService
+import com.z.demo.service.LogsService
 import okhttp3.*
 import org.json.JSONArray
 import org.json.JSONObject
@@ -64,7 +64,7 @@ class Requests() {
                     error="error",
                     timestamp = java.sql.Timestamp(System.currentTimeMillis())
                 )
-
+                // Crear registro de Log
             }
 
             val obj = JSONObject(resStr)

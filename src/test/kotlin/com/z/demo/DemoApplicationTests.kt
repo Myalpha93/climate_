@@ -1,10 +1,10 @@
-package com.z.climate
+package com.z.demo
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
 
 @SpringBootTest
-class ClimateApplicationTests {
+class DemoApplicationTests {
 
 	@Test
 	fun contextLoads() {
